@@ -4,8 +4,13 @@ function maxSubArray(nums: number[]): number {
     
     for (let i=0;i<nums.length;i++){
         const num = nums[i];
-        curSub = Math.max(num,curSub+num);
-        maxSub = Math.max(maxSub, curSub)
+        curSub = maxVal(num,curSub+num);
+        maxSub = maxVal(maxSub, curSub)
     }
     return maxSub
 };
+
+function maxVal(a:number, b:number): number{
+    if (b>a) return b;
+    return a
+}
