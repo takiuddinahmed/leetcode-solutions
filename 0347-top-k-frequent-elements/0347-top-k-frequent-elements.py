@@ -18,7 +18,7 @@ class Solution:
         count = 0
         res = []
 
-        i = len(arr) - 1
+        i = len(arr) -1
         
         while i >= 0:
             if arr[i]:
