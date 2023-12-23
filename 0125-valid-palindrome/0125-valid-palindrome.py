@@ -12,7 +12,7 @@ class Solution:
         if l < 2:
             return True
 
-        while i < (l/2 + 1):
+        while i < (l/2):
             if new_str[i] != new_str[l-i-1]:
                 return False
             i += 1
