@@ -1,8 +1,4 @@
 class Solution:
-    def check_vowel(self, char):
-        if char in ('a','e','i','o','u'):
-            return True
-        return False
     
     def maxVowels(self, s: str, k: int) -> int:
         
@@ -13,7 +9,7 @@ class Solution:
         count = 0
         
         for char in first_sub_string:
-            if self.check_vowel(char):
+            if char in ('a','e','i','o','u'):
                 count += 1
                 
         largest = count
@@ -23,12 +19,12 @@ class Solution:
         while i < len(s) :
             
             # check new char 
-            if self.check_vowel(s[i]):
+            if s[i] in ('a','e','i','o','u'):
                 
                 count += 1
             
             # check old char
-            if self.check_vowel(s[i-k]):
+            if s[i-k] in ('a','e','i','o','u'):
                 count -= 1
             
             if count > largest:
