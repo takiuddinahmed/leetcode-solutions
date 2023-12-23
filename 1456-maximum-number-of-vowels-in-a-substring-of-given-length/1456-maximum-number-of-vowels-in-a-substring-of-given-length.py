@@ -3,14 +3,14 @@ class Solution:
     def maxVowels(self, s: str, k: int) -> int:
         
         largest = 0
-        i = k
         
-        first_sub_string = s[i-k:i]
         count = 0
         
-        for char in first_sub_string:
-            if char in ('a','e','i','o','u'):
+        i = 0
+        while i < k:
+            if s[i] in ('a','e','i','o','u'):
                 count += 1
+            i += 1
                 
         largest = count
         
