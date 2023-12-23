@@ -8,7 +8,7 @@ class Solution:
         
         i = 0
         while i < k:
-            if s[i] == 'a' or s[i]=='e' or s[i] == 'i' or s[i] == 'o' or s[i] == 'u':
+            if s[i] in ('a','e','i','o','u'):
                 count += 1
             i += 1
                 
@@ -19,12 +19,12 @@ class Solution:
         while i < len(s) :
             
             # check new char 
-            if s[i] == 'a' or s[i]=='e' or s[i] == 'i' or s[i] == 'o' or s[i] == 'u':
+            if s[i] in ('a','e','i','o','u'):
                 
                 count += 1
             
             # check old char
-            if s[i-k] == 'a' or s[i-k]=='e' or s[i-k] == 'i' or s[i-k] == 'o' or s[i-k] == 'u':
+            if s[i-k] in ('a','e','i','o','u'):
                 count -= 1
             
             if count > largest:
