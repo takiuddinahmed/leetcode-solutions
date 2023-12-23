@@ -30,7 +30,6 @@ class Solution:
             # check old char
             if self.check_vowel(s[i-k]):
                 count -= 1
-            print(s[i], s[i-k], count, largest)
             
             if count > largest:
                 largest = count
