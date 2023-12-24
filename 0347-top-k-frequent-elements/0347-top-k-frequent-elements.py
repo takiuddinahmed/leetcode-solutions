@@ -11,3 +11,7 @@ class Solution:
         arr =  sorted(freq.items(), key= lambda x: x[1], reverse=True)[:k]
         result = [ item[0] for item in arr ]
         return result
+        
+        # freq = {2:2, 3:1, 1:3}
+        # arr = [(1,3),(2,2),(3,1)]
+        
