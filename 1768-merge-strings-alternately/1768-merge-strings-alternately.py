@@ -1,12 +1,5 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        n = min(len(word1), len(word2))
-        
-        i = 0
-        s = ""
-        while i < n:
-            s += word1[i] + word2[i]
-            i += 1
-        s += word1[n:] + word2[n:]
-        return s
+        res=""
+        return res.join([x for x in itertools.chain.from_iterable(itertools.zip_longest(list(word1),list(word2))) if x])
             
